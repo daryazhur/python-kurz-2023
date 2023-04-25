@@ -16,14 +16,14 @@ Tipy:
 - Pro kontrolu předvolby použijte slicing (viz první lekce) pro získání prvních 4 znaků řetězce. Ty porovnejte s 
 řetězcem "+420".
 """
-
 def telefonni_cislo(cislo):
     if len(cislo) == 9: 
-        tel = True
+        return True 
+    if '+420' in cislo:
+        return True
     else:
-        print('Vase telefonni cislo neni platne')
-        exit()  
-    return tel
+        return False
+            
 cislo=(str(input('Zadejte svoje telefonni cislo: ')))
 tel = telefonni_cislo(cislo)
 print(tel)
