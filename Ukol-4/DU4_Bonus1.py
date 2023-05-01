@@ -5,16 +5,19 @@ parametr nový znak. Pokud se chceš nějakého znaku zbavit, "nahraď" ho práz
 
 Odkaz na dokumentaci metody replace: https://docs.python.org/3/library/stdtypes.html#str.replace
 """
-def telefonni_cislo(cislo):
+def telefonni_cislo(m):
     if len(m) == 9: 
         return True 
-    if '+420' in cislo:
-        return True
+    if len(m) == 13:
+        if m[:2] == '+420':
+            return True
+        return True    
     else:
         return False
+    
 cislo=(str(input('Zadejte svoje telefonni cislo: ')))
 m = cislo.replace(" ", "")
-tel = telefonni_cislo(cislo)
+tel = telefonni_cislo(m)
 print(tel)
 
 def sms(znak):

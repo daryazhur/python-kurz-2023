@@ -19,8 +19,10 @@ Tipy:
 def telefonni_cislo(cislo):
     if len(cislo) == 9: 
         return True 
-    if '+420' in cislo:
-        return True
+    if len(cislo) == 13:
+        if cislo[:2] == '+420':
+            return True
+        return True    
     else:
         return False
             
@@ -28,10 +30,9 @@ cislo=(str(input('Zadejte svoje telefonni cislo: ')))
 tel = telefonni_cislo(cislo)
 print(tel)
 
-def sms(znak):
-    cena = 0.01667 * znak
-    return cena  
+def sms(text):
+    return(int(len(text)/180)+1)*3 
+
 text = input('Napiste zpravu: ')
-znak = len(text)
-cena = sms(znak)
+cena = sms(text)
 print(f'Cena zpravy je {cena} Kc')   
