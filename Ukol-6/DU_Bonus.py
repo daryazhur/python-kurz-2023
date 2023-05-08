@@ -36,7 +36,7 @@ if heslo_ok:
 else:
     print('Heslo neni spravne')    
 
-regularni_vyraz = re.compile(r"\w+.?\w+@\w+\.cz")
+regularni_vyraz = re.compile(r"\w+.?\w+@\w+\.\w+")
 
 email = input("Zadej e-mail: ")
 

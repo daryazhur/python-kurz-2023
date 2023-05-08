@@ -6,6 +6,6 @@ Celkem by jich mělo být 18.
 """
 
 import re
-regularni_vyraz = re.compile(r"^[\d ]+[\w ]*[\d]*")
+regularni_vyraz = re.compile(r"^[\d{5} ]*\s\w.*")
 
 
